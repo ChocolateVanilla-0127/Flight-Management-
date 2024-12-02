@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Flight Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#flights">Available Flights</a></li>
+                <li><a href="#book">Book a Flight</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to the Flight Management System</h2>
+        <p>Book your flight easily with just a few clicks.</p>
+    </section>
+
+    <section id="flights">
+        <h2>Available Flights</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AI202</td>
+                    <td>New York</td>
+                    <td>London</td>
+                    <td>2024-12-05 10:00 AM</td>
+                    <td>2024-12-05 08:00 PM</td>
+                    <td>$1200</td>
+                </tr>
+                <tr>
+                    <td>AI303</td>
+                    <td>Los Angeles</td>
+                    <td>Paris</td>
+                    <td>2024-12-06 11:00 AM</td>
+                    <td>2024-12-06 09:00 PM</td>
+                    <td>$1500</td>
+                </tr>
+                <!-- Add more flight rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="book">
+        <h2>Book a Flight</h2>
+        <form id="booking-form" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="flight">Select Flight:</label>
+            <select id="flight" name="flight" required>
+                <option value="AI202">AI202 - New York to London</option>
+                <option value="AI303">AI303 - Los Angeles to Paris</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="booking-message"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Flight Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
